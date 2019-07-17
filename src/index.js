@@ -93,8 +93,8 @@ module.exports = (robot) => {
             }
           }
         `, {issueUrl: issueUrl})
+        logger.debug(graphResult, 'Retrieved results')
         const {resource} = graphResult
-
         let allProjects = []
         if (resource.repository.owner.projects) {
           // Add Org Projects
